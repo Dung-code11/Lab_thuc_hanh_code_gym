@@ -6,10 +6,13 @@
     <title>Lab06th1</title>
 </head>
 <body>
+    <div id="messageDiv"></div>
     <button type="button" onclick="showMessage();">Click Here</button>
     <script>
         function showMessage() {
             alert("Xin Chào");
+            document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+            document.write('Xin chào!');
             console.log("Xin Chào");
         }
     </script>
