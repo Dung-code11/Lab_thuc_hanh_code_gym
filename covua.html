@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn Cờ Vua</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .chessboard {
+            width: 400px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            border: 10px solid orange;
+            margin: 20px auto;
+        }
+        .chessboard div {
+            width: 100%;
+            height: 100%;
+        }
+        .black {
+            background-color: black;
+        }
+        .white {
+            background-color: white;
+        }
+        .labels {
+            display: flex;
+            justify-content: space-between;
+            width: 420px;
+            margin: auto;
+        }
+        .labels span {
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .row-labels {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            justify-content: space-between;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bàn Cờ Vua</h1>
+    
+    <div class="labels">
+        <span>1</span> <span>2</span> <span>3</span> <span>4</span> 
+        <span>5</span> <span>6</span> <span>7</span> <span>8</span>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="row-labels">
+            <span>A</span> <span>B</span> <span>C</span> <span>D</span> 
+            <span>E</span> <span>F</span> <span>G</span> <span>H</span>
+        </div>
+        <div class="chessboard">
+            <!-- Tạo bàn cờ bằng JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const chessboard = document.querySelector('.chessboard');
+        for (let row = 0; row < 8; row++) {
+            for (let col = 0; col < 8; col++) {
+                let square = document.createElement('div');
+                square.className = (row + col) % 2 === 0 ? 'white' : 'black';
+                chessboard.appendChild(square);
+            }
+        }
+    </script>
+
+</body>
+</html>
