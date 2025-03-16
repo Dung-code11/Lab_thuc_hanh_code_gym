@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07bt1</title>
+</head>
+<body>
+    <script>
+         document.write("Bài 1");
+         document.write("<br>");
+         let button = document.createElement("button");
+         button.innerText = "Tính điểm";
+         document.body.appendChild(button);
+         button.addEventListener("click", function(){
+         let nhapdiemvl;
+         let nhapdiemhoa;
+         let nhapdiemsinh;
+         nhapdiemvl= prompt("Nhập điểm vật lý: ");
+         nhapdiemhoa= prompt("Nhập điểm hóa học: ");
+         nhapdiemsinh= prompt("Nhập điểm sinh học: ");
+         let vl;
+         let hoa;
+         let sinh;
+         vl = parseInt(nhapdiemvl);
+         hoa = parseInt(nhapdiemhoa);
+         sinh = parseInt(nhapdiemsinh);
+         let tong = vl + hoa + sinh;
+         let tb = tong / 3 ;
+         alert("Tổng điểm = " + tong + "\n" +  "Điểm trung bình = " + tb);
+         });
+         document.write("<br>");
+         document.write("Bài 2");
+         document.write("<br>");
+         let button2 = document.createElement("button");
+         button2.innerText = "Chuyển đổi C sang F";
+         document.body.appendChild(button2);
+         button2.addEventListener("click", function(){
+    let nhapdoc;
+    nhapdoc = prompt("Nhập độ C");
+    let doc;
+    doc = parseFloat(nhapdoc);
+    let dof = (doc * 9 / 5 ) + 32;
+    alert("Độ F = " + dof);
+         });
+         document.write("<br>");
+         document.write("Bài 3");
+         document.write("<br>");
+         let button3 = document.createElement("button");
+         button3.innerText = "Tính diện tích hình tròn";
+         document.body.appendChild(button3);
+         button3.addEventListener("click", function(){
+          let nhapbankinh;
+          nhapbankinh = prompt("Nhập bán kính");
+          let bankinh;
+          bankinh = parseFloat(nhapbankinh);
+          let dientich = bankinh * bankinh * 3.14 ;
+          alert("Diện tích = " + dientich);
+         });
+         document.write("<br>");
+         document.write("Bài 4");
+         document.write("<br>");
+         let button4 = document.createElement("button");
+         button4.innerText = "Tính chu vi hình tròn";
+         document.body.appendChild(button4);
+         button4.addEventListener("click", function(){
+          let nhapbankinh;
+          nhapbankinh = prompt("Nhập bán kính");
+          let bankinh;
+          bankinh = parseFloat(nhapbankinh);
+          let chuvi = 2 * 3.14 * bankinh ;
+          alert("Chu vi = " + chuvi);
+         });
+    </script>
+</body>
+</html>
